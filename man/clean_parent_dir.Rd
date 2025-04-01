@@ -17,6 +17,6 @@ To remove the augment \verb{*.pdf} and \code{.Rcheck} file/directories created
 in the parent directory of a package in development.
 }
 \examples{
-# clean_parent_dir(pkg = '../groupedHyperframe')
+# debug(clean_parent_dir); clean_parent_dir(pkg = '../rmarkdown.tzh')
 }
 \keyword{internal}

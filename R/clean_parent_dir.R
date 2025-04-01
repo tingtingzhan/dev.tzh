@@ -8,7 +8,7 @@
 #' in the parent directory of a package in development.
 #' 
 #' @examples
-#' # clean_parent_dir(pkg = '../groupedHyperframe')
+#' # debug(clean_parent_dir); clean_parent_dir(pkg = '../rmarkdown.tzh')
 #' @keywords internal
 #' @importFrom pkgload pkg_name pkg_version
 #' @export
@@ -23,9 +23,12 @@ clean_parent_dir <- function(pkg = '.') {
     list.files(pattern = paste0('^', name, '_.*\\.pdf$'), full.names = TRUE) |>
     file.remove()
   
+  parent_dir |>
+    list.files(pattern = paste0('^', name, '_.*\\.tar\\.gz$'), full.names = TRUE) |>
+    file.remove()
+  
   parent_dir |> 
     file.path(paste0(name, '.Rcheck')) |>
-    file.remove() |>
-    suppressWarnings()
+    unlink(recursive=TRUE)
   
 }
