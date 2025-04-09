@@ -2,7 +2,7 @@
 % Please edit documentation in R/check_Rd.R
 \name{check_Rd}
 \alias{check_Rd}
-\title{Checke \code{.Rd} File}
+\title{Check \code{.Rd} File}
 \usage{
 check_Rd(path)
 }
@@ -12,3 +12,4 @@ check_Rd(path)
 \description{
 Checking compliance to some conventions of CRAN.
 }
+\keyword{internal}

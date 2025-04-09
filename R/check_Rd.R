@@ -1,12 +1,13 @@
 
 
-#' @title Checke `.Rd` File
+#' @title Check `.Rd` File
 #' 
 #' @description
 #' Checking compliance to some conventions of CRAN.
 #' 
 #' @param path \link[base]{character} scalar, directory of one `.Rd` file
 #' 
+#' @keywords internal
 #' @export
 check_Rd <- function(path) {
   nm <- path |> basename()
