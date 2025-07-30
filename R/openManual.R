@@ -8,7 +8,7 @@
 openManual <- function(x) {
   # `x` is the invisible return from ?devtools::build_manual
   manual <- x$command |>
-    grep(pattern = '^--output=', value = TRUE) |>
+    grepv(pattern = '^--output=') |>
     gsub(pattern = '^--output=', replacement = '')
   paste('open', manual) |> system() # no need to close the open pdf
 }
