@@ -7,10 +7,12 @@
 #' @export
 openManual <- function(x) {
   # `x` is the invisible return from ?devtools::build_manual
-  manual <- x$command |>
+  x$command |>
     grepv(pattern = '^--output=') |>
-    gsub(pattern = '^--output=', replacement = '')
-  paste('open', manual) |> system() # no need to close the open pdf
+    gsub(pattern = '^--output=', replacement = '') |>
+    sprintf(fmt = 'open %s') |>
+    system()
+  #paste('open', manual) |> system() # no need to close the open pdf
 }
 
 
