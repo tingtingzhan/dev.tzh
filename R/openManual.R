@@ -1,7 +1,7 @@
 
 #' @title Open pdf Manual
 #' 
-#' @param x returned object from function \link[devtools]{build_manual}
+#' @param x returned object from the function \link[devtools]{build_manual}
 #' 
 #' @keywords internal
 #' @export
@@ -12,7 +12,6 @@ openManual <- function(x) {
     gsub(pattern = '^--output=', replacement = '') |>
     sprintf(fmt = 'open %s') |>
     system()
-  #paste('open', manual) |> system() # no need to close the open pdf
 }
 
 

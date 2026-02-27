@@ -7,7 +7,7 @@
 openManual(x)
 }
 \arguments{
-\item{x}{returned object from function \link[devtools]{build_manual}}
+\item{x}{returned object from the function \link[devtools]{build_manual}}
 }
 \description{
 Open pdf Manual
