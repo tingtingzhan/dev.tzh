@@ -10,5 +10,5 @@ Authors@R: c(person(given = "Tingting", family = "Zhan", role =
 Language: en-US
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 4.5.0)
-Suggests: devtools (== 2.4.6)
+Suggests: devtools (== 2.5.0)
 RoxygenNote: 7.3.3
